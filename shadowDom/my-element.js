@@ -1,7 +1,7 @@
 class myElement extends HTMLElement {
     constructor (){
-        super();     
-            
+        super();   
+        this.attachShadow({mode: 'open'})     
        
     }
 
@@ -41,7 +41,7 @@ class myElement extends HTMLElement {
     }
 
     render(){
-      this.appendChild(this.getTemplate().content.cloneNode(true))
+      this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
 
     }
 
