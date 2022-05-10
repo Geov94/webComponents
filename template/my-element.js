@@ -1,6 +1,7 @@
 class myElement extends HTMLElement {
     constructor (){
-        super();     
+        super();   
+        this.attachShadow({mode :"open"})  ;
             
        
     }
