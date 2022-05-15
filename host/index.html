@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:host</title>
+</head>
+<body>   
+    <my-element>
+                     
+        <span slot="title">SOY EL COMPONENTE 1</span>
+        <span slot="paragraph">Soy un parrafo</span>
+
+    </my-element>
+    <my-element class="aqua">
+                     
+        <span slot="title">SOY EL COMPONENTE 2</span>
+        <span slot="paragraph">Soy un parrafo</span>
+        
+    </my-element>
+    <my-element chartreuse>
+                     
+        <span slot="title">SOY EL COMPONENTE 3</span>
+        <span slot="paragraph">Soy un parrafo</span>
+        
+    </my-element>
+    <article class="card">
+        <my-element chartreuse>
+                     
+            <span slot="title">SOY EL COMPONENTE 4</span>
+            <span slot="paragraph">estoy en un article</span>
+            
+        </my-element>
+
+    </article>
+    <script  type="module" src="./my-element.js" ></script>
+</body>
+</html>
