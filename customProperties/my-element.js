@@ -11,9 +11,29 @@ class myElement extends HTMLElement {
     getStyles(){
       return `
         <style>
-          h2{
-            color:red;
-          }
+          :host{
+              --primary-color:blueviolet;
+              --secondary-color:cadetblue;
+              --heading-primary:40px;
+              --heading-secondary:30px;
+              display:inline-block;
+              width:100%;
+              min-width:300px;
+              max-width:450px;
+            }
+            section{
+                background-color: var(--primary-color);              
+            }
+            section div{
+              background: var(--secondary-color);
+
+            }
+            h1{
+               font-size:var(--heading-primary);
+            }
+            p{
+               font-size:var(--heading-secondary);
+            }
         </style> 
 
 
@@ -28,14 +48,11 @@ class myElement extends HTMLElement {
        <section>
          <h1>
           <slot name="title"></slot>
-         </h1>
-         <h2>
-          <slot></slot>
-         </h2> 
+         </h1>       
          <div>
-           <p>
-            <slot name="paragraph"></slot>
-           </p>
+            <p>
+             <slot name="paragraph"></slot>
+            </p>
          </div>
 
        </section> 

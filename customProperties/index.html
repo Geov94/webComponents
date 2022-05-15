@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Elements</title>
+    <style>
+        my-element {
+            --primary-color: goldenrod;
+        }
+        .segundo {
+            --secondary-color:thistle;
+        }
+
+        .tercero {
+            --heading-primary: 60px;
+            --heading-secondary:45px;
+            color:indianred;
+
+        }
+    </style>
 </head>
-<body>
-    <h2 >el titulo ¡¡ </h2>  
-    <my-element>soy un texto fuera del componente
-                <!-- <h1 slot="title">SOY UN TITULO H1</h1>
-                <P slot="paragraph">Soy un parrafo</P> -->
-                <span slot="title">SOY UN TITULO H1</span>
-                <span slot="paragraph">Soy un parrafo</span>
+<body>  
+    <my-element>
+        <span slot="title">SOY UN TITULO H1</span>
+        <span slot="paragraph">Soy un parrafo</span>
+    </my-element>
+    <my-element class="segundo">
+        <span slot="title">SOY UN TITULO H1</span>
+        <span slot="paragraph">Soy un parrafo</span>
+    </my-element>
+    <my-element class="tercero">
+        <span slot="title">SOY UN TITULO H1</span>
+        <span slot="paragraph">Soy un parrafo</span>
     </my-element>
     <script  type="module" src="./my-element.js" ></script>
 </body>
